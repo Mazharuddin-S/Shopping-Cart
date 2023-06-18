@@ -2,7 +2,7 @@
   "name": "react-redux-router-vite-project",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://Mazharuddin-S.github.io/Shopping-Cart/",
+  "homepage": "https://Mazharuddin-S.github.io/Shopping-Cart",
   "type": "module",
   "scripts": {
     "dev": "vite",
