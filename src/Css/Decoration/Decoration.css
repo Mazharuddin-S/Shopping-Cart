@@ -1,0 +1,42 @@
+#navbarDecoration {
+  display: flex;
+
+  background: wheat;
+}
+#navbarDecoration a {
+  color: black;
+  padding: 0.5rem 1rem;
+}
+#navbarDecoration a:hover {
+  background: rgb(219, 198, 159);
+}
+
+#navbarDecoration a.active {
+  background: rgb(219, 198, 159);
+  border-bottom: 2px solid black;
+}
+#decorationItem {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+#decorationSubItem {
+  color: black;
+  border: 1px solid gray;
+  width: 100%;
+  box-shadow: 0.3rem 0.3rem 0.3rem gray;
+}
+#decorationSubItem h6 {
+  padding: 0 0.5rem;
+}
+#decorationSubItem:hover {
+  border: 1px solid gold;
+}
+
+#decorationSubItem img {
+  width: 100%;
+  height: 45vh;
+}

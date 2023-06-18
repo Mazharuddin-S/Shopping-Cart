@@ -1,0 +1,39 @@
+#wishlist {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+#wishItem {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.5rem;
+  color: black;
+  border: 1px solid gray;
+  box-shadow: 0.3rem 0.3rem 0.3rem gray;
+  width: 100%;
+  position: relative;
+}
+
+#wishItem img {
+  width: 100%;
+  height: 45vh;
+}
+#wishItem h6 {
+  padding: 0 0.5rem;
+}
+
+#addWishToCart {
+  margin-top: auto;
+  align-self: center;
+  height: auto;
+  padding: 0.5rem 1rem;
+  width: max-content;
+  background: orange;
+}
+#addWishToCart:hover {
+  box-shadow: 0.2rem 0.2rem 0 gray;
+}

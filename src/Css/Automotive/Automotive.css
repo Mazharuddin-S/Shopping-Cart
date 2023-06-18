@@ -1,0 +1,43 @@
+#navbarAutomotive {
+  display: flex;
+  background: wheat;
+}
+#navbarAutomotive a {
+  padding: 0.5rem 1rem;
+  color: black;
+}
+#navbarAutomotive a.active {
+  border-bottom: 2px solid #000;
+  background: rgb(214, 194, 156);
+}
+#navbarAutomotive a:hover {
+  background: rgb(214, 194, 156);
+}
+
+#automotiveItem {
+  padding: 1rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+#automotiveSubItem {
+  color: black;
+}
+#automotiveSubItem img {
+  width: 100%;
+  height: 45vh;
+}
+#automotiveSubItem h6 {
+  padding: 0 0.5rem;
+}
+#automotiveSubItem {
+  border: 1px solid gray;
+  box-shadow: 0.3rem 0.3rem 0.3rem gray;
+}
+#automotiveSubItem:hover {
+  border: 2px solid red;
+}

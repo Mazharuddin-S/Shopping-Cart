@@ -1,0 +1,48 @@
+#navbarMensFashion,
+#navbarWomensFashion {
+  display: flex;
+  background: #008da0;
+}
+#navbarMensFashion a,
+#navbarWomensFashion a {
+  color: white;
+  padding: 0.5rem 1rem;
+}
+#navbarMensFashion a.active,
+#navbarWomensFashion a.active {
+  background-color: #028192;
+  border-bottom: 2px solid black;
+}
+#navbarMensFashion a:hover,
+#navbarWomensFashion a:hover {
+  background-color: #028192;
+}
+
+#fashionItem {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+#fashionSubItem {
+  border: 1px solid gray;
+  box-shadow: 0.3rem 0.3rem 0.3rem gray;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  color: black;
+}
+#fashionSubItem:hover {
+  border: 2px solid gold;
+}
+#fashionSubItem img {
+  flex-shrink: 0;
+  height: 45vh;
+  width: 100%;
+}
+#fashionSubItem > div {
+  padding: 0.5rem;
+}

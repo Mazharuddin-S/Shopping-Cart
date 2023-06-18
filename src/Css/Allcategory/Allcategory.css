@@ -1,0 +1,15 @@
+.categories {
+  overflow: hidden;
+  height: 0;
+  background: #81b1b1;
+  display: flex;
+  margin-left: 1rem;
+  flex-direction: column;
+}
+
+.categories > a {
+  padding: 0.5rem 1rem;
+}
+.categories a:hover {
+  background: #96cfcf;
+}

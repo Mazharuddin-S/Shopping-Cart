@@ -1,0 +1,26 @@
+.App {
+  width: 100vw;
+}
+
+a {
+  text-decoration: none;
+}
+.spinner-border {
+  margin: 50vh 0 0 50vw;
+}
+* ::-webkit-scrollbar {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: rgb(230, 215, 215);
+}
+*::-webkit-scrollbar-track {
+  background: rgb(230, 215, 215);
+}
+*::-webkit-scrollbar-thumb {
+  border-radius: 15px;
+  width: 15px;
+  background-color: rgb(206, 153, 10);
+}
+*::-webkit-scrollbar-corner {
+  background: rgb(230, 215, 215);
+}

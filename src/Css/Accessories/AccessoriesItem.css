@@ -1,0 +1,25 @@
+#accessoriesItem {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+#accessoriesSubItem {
+  color: black;
+  border: 1px solid gray;
+  width: 100%;
+  box-shadow: 0.3rem 0.3rem 0.3rem gray;
+}
+#accessoriesSubItem h6 {
+  padding: 0 0.5rem;
+}
+#accessoriesSubItem:hover {
+  border: 1px solid gold;
+}
+#accessoriesSubItem img {
+  width: 100%;
+  height: 45vh;
+}

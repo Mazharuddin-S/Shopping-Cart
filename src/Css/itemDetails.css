@@ -1,0 +1,76 @@
+#itemDetails {
+  padding: 1rem;
+  width: 100vw;
+  display: flex;
+  position: relative;
+}
+
+#itemDetails > div:first-child {
+  width: 35%;
+  height: max-content;
+  position: sticky;
+  top: 16vh;
+}
+#wishheart {
+  position: absolute;
+  right: 0;
+  z-index: 4;
+  background: transparent;
+}
+
+#wishheart svg {
+  width: 2rem;
+  height: 2rem;
+}
+#wishheart svg:hover {
+  color: red;
+}
+.carousel-item img {
+  height: 60vh;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: red;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: rgb(18, 129, 92);
+}
+#carousel {
+  border: 1px solid gray;
+  overflow-x: hidden;
+  width: 100%;
+  height: max-content;
+  flex-shrink: 0;
+}
+#addToCart {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+#addToCart button {
+  width: 45%;
+  height: auto;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  color: white;
+}
+#addToCart button:hover {
+  box-shadow: 3px 3px gray;
+}
+#addToCart button:first-child {
+  background: orange;
+}
+#addToCart button:last-child {
+  background: orangered;
+}
+
+#itemDescription {
+  width: 65%;
+  padding: 0 1rem;
+  overflow: auto;
+}
+
+#itemDescription p span {
+  font-size: 2rem;
+}

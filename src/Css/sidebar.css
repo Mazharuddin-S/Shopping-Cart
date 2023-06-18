@@ -1,0 +1,111 @@
+#menu {
+  /* padding: 0.5rem; */
+  position: absolute;
+  left: -3rem;
+  display: flex;
+  align-content: center;
+}
+.show-hide {
+  display: none;
+}
+#menu button {
+  align-self: center;
+  background-color: transparent;
+}
+#menu .faBars {
+  color: orange;
+  margin: auto 0;
+  width: 2rem;
+  height: 2rem;
+}
+
+.faBars:hover {
+  color: red;
+}
+
+#sidebar {
+  background: paleturquoise;
+  transition: all 0.5s ease-in-out;
+  border: 2px solid gray;
+  position: fixed;
+  right: -25vw;
+  top: 0;
+  z-index: 4;
+  width: 25vw;
+  min-height: 100vh;
+}
+
+#closeSidebar {
+  background: paleturquoise;
+  position: absolute;
+  width: max-content;
+  height: max-content;
+  font-size: 2rem;
+  padding: 0 0.5rem;
+}
+#closeSidebar:hover {
+  color: red;
+}
+#sidebar > a {
+  border-bottom: 1px solid gray;
+  display: flex;
+  padding: 0.5rem 0;
+}
+#logo {
+  padding: 0.5rem;
+  border-bottom: 1px solid gray;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+#sidebar #logo:hover {
+  background: paleturquoise;
+  color: gold;
+  border-left: none;
+}
+#sidebar a#logo.active {
+  background: paleturquoise;
+  border-left: none;
+}
+#logo svg {
+  height: 3rem !important;
+  width: 3rem !important;
+}
+#allCategory {
+  border-bottom: 1px solid gray;
+}
+#allCategory > div:first-child:hover {
+  background: white;
+}
+
+#allCategory > div:first-child {
+  /* border-bottom: 1px solid gray; */
+  padding: 0.5rem 0;
+}
+.caretDown {
+  transform: rotate(90deg);
+  transition: all 0.3s;
+}
+.categoryHide {
+  height: 100%;
+  transition: all 0.5s;
+}
+#sidebar a {
+  color: black;
+}
+#sidebar > a:hover {
+  background: white;
+  border-left: 0.3rem solid black;
+}
+#sidebar .active {
+  border-left: 0.3rem solid black;
+  background-color: white;
+}
+#sidebar svg {
+  margin: auto 1rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  /* padding: 0.5rem 1rem; */
+}

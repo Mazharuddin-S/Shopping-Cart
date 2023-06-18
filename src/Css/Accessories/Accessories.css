@@ -1,0 +1,41 @@
+#accessories {
+  position: relative;
+}
+#navbarAccessories {
+  width: 100%;
+
+  display: flex;
+  background: wheat;
+}
+#navbarAccessories a {
+  color: black;
+  padding: 0.5rem 1rem;
+}
+#navbarAccessories a:hover {
+  background: rgb(219, 198, 159);
+}
+#navbarAccessories a.active {
+  border-bottom: 2px solid black;
+  background: rgb(219, 198, 159);
+}
+
+#navbarMensAccess,
+#navbarWomensAccess {
+  width: 100%;
+  display: flex;
+  background-color: #04acc2;
+}
+#navbarMensAccess a,
+#navbarWomensAccess a {
+  color: white;
+  padding: 0.5rem 1rem;
+}
+#navbarMensAccess a:hover,
+#navbarWomensAccess a:hover {
+  background: #039aad;
+}
+#navbarMensAccess a.active,
+#navbarWomensAccess a.active {
+  background: #039aad;
+  border-bottom: 2px solid black;
+}

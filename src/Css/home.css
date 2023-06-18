@@ -1,0 +1,35 @@
+#home {
+  margin-top: 15vh;
+  width: 100%;
+  padding-top: 1rem;
+}
+#home > div:first-child {
+  /* background-color: teal; */
+}
+#home > div {
+  margin-bottom: 1rem;
+}
+#home h5 {
+  padding: 0.5rem 1.5rem;
+  margin: 0;
+}
+#topRated {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  padding: 0.5rem 1rem;
+}
+#home > div:nth-child(2) {
+  /* background-color: teal; */
+}
+#home h5 {
+  width: max-content;
+  background: red;
+  color: white;
+}
+#discouted {
+  width: 100%;
+  overflow: auto;
+  display: flex;
+  padding: 0.5rem 1rem;
+}

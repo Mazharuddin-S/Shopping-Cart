@@ -1,0 +1,33 @@
+#cart {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+  grid-auto-rows: auto;
+  gap: 1rem;
+}
+
+#cart > div:first-child {
+  grid-column: span 4;
+}
+#checkout {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  width: auto;
+  height: auto;
+  background: orange;
+}
+#checkout:hover {
+  background: orangered;
+}
+#clearCart {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  width: auto;
+  height: auto;
+  background: rgb(2, 192, 2);
+  margin-left: 1rem;
+}
+#clearCart:hover {
+  background: red;
+}

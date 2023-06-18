@@ -1,0 +1,15 @@
+#navbarFashion {
+  background-color: wheat;
+  display: flex;
+}
+#navbarFashion a {
+  color: black;
+  padding: 0.5rem 2rem;
+}
+#navbarFashion a:hover {
+  background: rgb(206, 186, 150);
+}
+#navbarFashion a.active {
+  background-color: rgb(206, 186, 150);
+  border-bottom: 2px solid black;
+}
