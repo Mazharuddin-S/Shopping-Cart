@@ -1,51 +1,116 @@
 #navbar {
   background: cyan;
-  padding-right: 4rem;
+  height: 25vh;
   width: 100vw;
-  overflow: auto;
-  min-height: 15vh;
+  /* overflow: auto; */
   display: flex;
+  flex-direction: column;
   position: fixed;
   z-index: 3;
   top: 0;
   /* justify-content: space-between; */
 }
-#navbar .active {
-  background-color: #34caa0;
+#navbar_navigations {
+  background-color: cyan;
+  width: 100%;
+  display: flex;
+  overflow: auto;
+}
+#navbar_navigations .active {
   border-bottom: 2px solid black;
 }
-#navbar > a {
+#navbar_navigations > a {
   padding: 0.5rem 1rem;
   color: black;
   display: flex;
   flex: 1 1 0px;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
-#navbar span {
+#navbar_navigations span {
   width: auto;
 }
-#navbar a:hover {
-  background: #34caa0;
+#navbar_navigations a:hover {
+  border-bottom: 2px solid black;
 }
 
-#navbar img {
+#navbar_navigations img {
   border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
 }
 #search {
+  width: 50vw;
+  order: -1;
+  margin: 1rem;
   background: transparent;
-  border: 2px solid black;
+  position: relative;
   align-self: center;
   display: flex;
+  flex-direction: column;
+}
+#search > div:first-child {
+  display: flex;
+}
+#search div input {
+  width: 90%;
+  padding-left: 1rem;
+  border-radius: 0.5rem 0 0 0;
+}
+#search div button {
+  min-width: 10%;
+  background-color: white;
+  border-radius: 0 0.5rem 0 0;
+}
+#recommendation {
+  /* border-top: 0.1rem solid lightgrey; */
+  border-radius: 0 0 0.5rem 0.5rem;
+  background-color: lightcyan;
+  width: 100%;
+  height: 0px;
+  position: absolute;
+  top: 2rem;
+  overflow: hidden;
+  z-index: 1111;
+  transition: all 0.5s;
+}
+#recommendation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#recommendation ul li {
+  border-bottom: 0.1rem solid lightgray;
+  padding: 0.5rem 1rem;
+}
+#recommendation ul li a {
+  color: gray;
+}
+#recommendation ul li:hover {
+  background-color: white;
 }
 #search input,
 button {
   height: 2rem;
-
   border: none;
 }
 #search input:focus {
   outline: none;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+  #navbar {
+    height: 15vh;
+  }
+  #navbar_navigationsa {
+    padding: 0.5rem 1rem;
+  }
+  #search {
+    order: -1;
+    width: 70vw;
+    margin: 0.5rem;
+  }
 }

@@ -21,6 +21,7 @@
 #wishItem img {
   width: 100%;
   height: 45vh;
+  margin-bottom: auto;
 }
 #wishItem h6 {
   padding: 0 0.5rem;
@@ -36,4 +37,18 @@
 }
 #addWishToCart:hover {
   box-shadow: 0.2rem 0.2rem 0 gray;
+}
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+  #wishlist {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh;
+    grid-auto-rows: 50vh;
+  }
+  #wishItem img {
+    width: 100%;
+    height: 60%;
+    margin-bottom: auto;
+  }
 }

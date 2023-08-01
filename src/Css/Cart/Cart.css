@@ -8,7 +8,7 @@
 }
 
 #cart > div:first-child {
-  grid-column: span 4;
+  grid-column: 1 / -1;
 }
 #checkout {
   font-size: 1rem;
@@ -30,4 +30,18 @@
 }
 #clearCart:hover {
   background: red;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 400px) {
+  #cart {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: auto;
+  }
+  #cartitem img {
+    width: 100%;
+    height: 30vh;
+  }
 }

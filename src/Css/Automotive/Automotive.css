@@ -29,6 +29,7 @@
 }
 #automotiveSubItem img {
   width: 100%;
+  margin-bottom: auto;
   height: 45vh;
 }
 #automotiveSubItem h6 {
@@ -36,8 +37,25 @@
 }
 #automotiveSubItem {
   border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0.3rem 0.3rem 0.3rem gray;
 }
 #automotiveSubItem:hover {
   border: 2px solid red;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+  #automotiveItem {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh;
+    grid-auto-rows: 50vh;
+  }
+  #automotiveSubItem img {
+    width: 100%;
+    margin-bottom: auto;
+    height: 60%;
+  }
 }

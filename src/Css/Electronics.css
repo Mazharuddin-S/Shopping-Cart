@@ -1,9 +1,10 @@
 #electronicsNav {
+  width: 100%;
   display: flex;
   background-color: wheat;
 }
 #electronicsNav a {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
   color: black;
 }
 #electronicsNav a:hover {
@@ -18,10 +19,9 @@
 #smartphones,
 #laptops,
 #lightings {
-  border: 1px solid gray;
-
+  /* border: 1px solid gray; */
   margin-top: 1rem;
-  padding: 0 1rem;
+  padding: 0 0.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto 60vh;
@@ -60,5 +60,17 @@
   height: max-content;
   color: white;
   width: max-content;
-  grid-column: span 4;
+  grid-column: 1/-1;
+}
+
+/* Media Quries */
+
+@media only screen and (max-width: 480px) {
+  #smartphones,
+  #laptops,
+  #lightings {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 50vh;
+    grid-auto-rows: 50vh;
+  }
 }

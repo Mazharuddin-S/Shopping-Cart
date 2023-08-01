@@ -1,7 +1,6 @@
 import React from "react";
 import "../Css/item.css";
 import { Link } from "react-router-dom";
-import Img from "../images/fashion1.jpeg";
 
 function Item(props) {
   const { thumbnail, itemId, discount, rating, title, brand } = props;

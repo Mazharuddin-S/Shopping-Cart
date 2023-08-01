@@ -25,6 +25,8 @@
 }
 #groceriesSubItem {
   border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0.3rem 0.3rem 0.3rem gray;
   color: black;
 }
@@ -34,7 +36,18 @@
 #groceriesSubItem img {
   width: 100%;
   height: 45vh;
+  margin-bottom: auto;
 }
 #groceriesSubItem h6 {
   padding: 0 0.5rem;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+  #groceriesItem {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh;
+    grid-auto-rows: 50vh;
+  }
 }

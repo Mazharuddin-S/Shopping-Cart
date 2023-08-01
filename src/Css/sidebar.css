@@ -1,7 +1,10 @@
 #menu {
   /* padding: 0.5rem; */
-  position: absolute;
-  left: -3rem;
+  position: fixed;
+
+  right: 0;
+  top: 0;
+  z-index: 100;
   display: flex;
   align-content: center;
 }
@@ -14,7 +17,7 @@
 }
 #menu .faBars {
   color: orange;
-  margin: auto 0;
+  /* margin: auto 0; */
   width: 2rem;
   height: 2rem;
 }
@@ -30,7 +33,7 @@
   position: fixed;
   right: -25vw;
   top: 0;
-  z-index: 4;
+  z-index: 100;
   width: 25vw;
   min-height: 100vh;
 }
@@ -108,4 +111,18 @@
   width: 1.5rem;
   height: 1.5rem;
   /* padding: 0.5rem 1rem; */
+}
+
+/* Media */
+@media only screen and (max-width: 480px) {
+  #sidebar {
+    width: 70vw;
+    right: -70vw;
+  }
+}
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  #sidebar {
+    width: 30vw;
+    right: -50vw;
+  }
 }

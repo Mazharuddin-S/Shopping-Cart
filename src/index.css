@@ -14,15 +14,15 @@
   -webkit-text-size-adjust: 100%;
 }
 #root {
-  width: 100vw;
+  width: 98%;
   min-height: 100vh;
 }
 
 body {
   margin: 0;
   padding: 0;
-  width: 100%;
-  overflow-x: auto;
+  width: 100vw;
+  overflow: auto;
   min-height: 100vh;
 }
 body::-webkit-scrollbar {

@@ -1,5 +1,5 @@
 #home {
-  margin-top: 15vh;
+  margin-top: 25vh;
   width: 100%;
   padding-top: 1rem;
 }
@@ -17,7 +17,7 @@
   width: 100%;
   overflow: auto;
   display: flex;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0rem;
 }
 #home > div:nth-child(2) {
   /* background-color: teal; */
@@ -31,5 +31,12 @@
   width: 100%;
   overflow: auto;
   display: flex;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 480px) {
+  #home {
+    margin-top: 15vh;
+  }
 }

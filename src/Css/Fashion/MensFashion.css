@@ -19,11 +19,11 @@
 }
 
 #fashionItem {
-  padding: 1rem;
+  padding: 0.5rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: auto;
-  grid-auto-rows: auto;
+
+  grid-auto-rows: 60vh;
   gap: 1rem;
 }
 #fashionSubItem {
@@ -40,9 +40,19 @@
 }
 #fashionSubItem img {
   flex-shrink: 0;
-  height: 45vh;
+  height: 60%;
   width: 100%;
 }
 #fashionSubItem > div {
   padding: 0.5rem;
+}
+
+@media only screen and (max-width: 480px) {
+  #fashionItem {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 50vh;
+  }
+  #fashionSubItem img {
+    height: 60%;
+  }
 }

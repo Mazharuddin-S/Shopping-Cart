@@ -26,6 +26,8 @@
 #decorationSubItem {
   color: black;
   border: 1px solid gray;
+  display: flex;
+  flex-direction: column;
   width: 100%;
   box-shadow: 0.3rem 0.3rem 0.3rem gray;
 }
@@ -39,4 +41,19 @@
 #decorationSubItem img {
   width: 100%;
   height: 45vh;
+  margin-bottom: auto;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 480px) {
+  #decorationItem {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 50vh;
+    grid-auto-rows: 50vh;
+  }
+  #decorationSubItem img {
+    width: 100%;
+    height: 60%;
+  }
 }
