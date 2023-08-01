@@ -1,0 +1,77 @@
+import { useNavigate, Link } from "react-router-dom";
+import { AiOutlineSearch } from "react-icons/ai";
+import { useState } from "react";
+import { useSelector } from "react-redux";
+import "../../Css/Navbar.css";
+
+function Search() {
+  const products = useSelector(store => store.products);
+  const [recommend, setRecommendation] = useState([]);
+  const redirect = useNavigate();
+
+  function inputHandler(event) {
+    let value = event.target.value.toLowerCase();
+    let recommendation = document.getElementById("recommendation");
+    let search = document.getElementById("search");
+
+    if (window.navigator.userAgentData.mobile == true) {
+      redirect("/search", { replace: true });
+      search.style.position = "absolute";
+      search.style.left = "50%";
+      search.style.transform = "translateX(-60%)";
+    }
+    clearTimeout(window.debounce);
+    window.debounce = setTimeout(() => {
+      let newRecommend = [];
+      products.map(item => {
+        if (
+          item.title.toLowerCase().startsWith(value) ||
+          item.title.toLowerCase().includes(value)
+        ) {
+          newRecommend.push(item);
+          setRecommendation(newRecommend);
+        }
+      });
+    }, 500);
+
+    if (value == "") {
+      recommendation.style.height = "0px";
+    } else {
+      recommendation.style.height = "30vh";
+    }
+    recommendation.style.overflow = "auto";
+  }
+  function blurHandler(event) {
+    let recommendation = document.getElementById("recommendation");
+    recommendation.style.height = "0px";
+  }
+
+  return (
+    <form action="" id="search">
+      <div>
+        <input
+          type="text"
+          onInput={inputHandler}
+          onBlur={blurHandler}
+          placeholder="Search Products here"
+        />
+        <button>{<AiOutlineSearch />}</button>
+      </div>
+      <div id="recommendation">
+        <ul>
+          {recommend.map(item => {
+            return (
+              <li key={item.id}>
+                <Link to={`/product?itemId=${item.id}#${item.id}`}>
+                  {item.title}
+                </Link>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    </form>
+  );
+}
+
+export default Search;

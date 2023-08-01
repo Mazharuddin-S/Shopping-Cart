@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "../Css/Navbar.css";
 
 import homeImg from "../images/home.png";
@@ -11,40 +11,9 @@ import automotiveImg from "../images/automotive.jpeg";
 import { AiOutlineSearch } from "react-icons/ai";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import Search from "./Search/search";
 
 function Navbar() {
-  const products = useSelector(store => store.products);
-  const [recommend, setRecommendation] = useState([]);
-
-  function inputHandler(event) {
-    let value = event.target.value.toLowerCase();
-
-    clearTimeout(window.debounce);
-    window.debounce = setTimeout(() => {
-      let newRecommend = [];
-      products.map(item => {
-        if (
-          item.title.toLowerCase().startsWith(value) ||
-          item.title.toLowerCase().includes(value)
-        ) {
-          newRecommend.push(item);
-          setRecommendation(newRecommend);
-        }
-      });
-    }, 500);
-    let recommendation = document.getElementById("recommendation");
-    if (value == "") {
-      recommendation.style.height = "0px";
-    } else {
-      recommendation.style.height = "30vh";
-    }
-    recommendation.style.overflow = "auto";
-  }
-  function blurHandler(event) {
-    let recommendation = document.getElementById("recommendation");
-    recommendation.style.height = "0px";
-  }
-
   return (
     <div id="navbar">
       <div id="navbar_navigations">
@@ -77,30 +46,7 @@ function Navbar() {
           <span>Automotive</span>
         </NavLink>
       </div>
-      <form action="" id="search">
-        <div>
-          <input
-            type="text"
-            onInput={inputHandler}
-            onBlur={blurHandler}
-            placeholder="Search Products here"
-          />
-          <button>{<AiOutlineSearch />}</button>
-        </div>
-        <div id="recommendation">
-          <ul>
-            {recommend.map(item => {
-              return (
-                <li key={item.id}>
-                  <Link to={`/product?itemId=${item.id}#${item.id}`}>
-                    {item.title}
-                  </Link>
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-      </form>
+      <Search />
     </div>
   );
 }

@@ -21,6 +21,7 @@ import Lightings from "./Components/ElectronicsComp/Lighting";
 import SideBar from "./Components/SideBar/sidebar";
 import CartComponent from "./Components/CartComponents/CartComponent";
 import Wishlist from "./Components/WishlistComponent/WishlistComponent";
+import Search from "./Components/Search/search";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -51,11 +52,13 @@ function App() {
 
       <div className="App" id="App">
         <SideBar />
+
         <Routes>
           <Route
             path="/"
             element={[<Home key={"home"} />, <Navbar key={"navbar"} />]}
           ></Route>
+          <Route path="search" element={<Search />} />
           <Route path="cart" element={<CartComponent />} />
           <Route path="wishlist" element={<Wishlist />} />
           {/* NESTED ROUTES USING <OUTELET/> METHOD */}
