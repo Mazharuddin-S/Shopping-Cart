@@ -56,6 +56,7 @@
 }
 #search div input {
   width: 90%;
+  color: lightslategray;
   background-color: whitesmoke;
   padding-left: 1rem;
   border-radius: 0.5rem 0 0 0;
@@ -106,7 +107,7 @@ button {
 
 @media only screen and (max-width: 480px) {
   #navbar {
-    height: 15vh;
+    height: max-content;
   }
   #navbar_navigationsa {
     padding: 0.5rem 1rem;

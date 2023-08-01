@@ -53,6 +53,7 @@ function Search() {
           type="text"
           onInput={inputHandler}
           onBlur={blurHandler}
+          onFocus={inputHandler}
           placeholder="Search Products here"
         />
         <button>{<AiOutlineSearch />}</button>
