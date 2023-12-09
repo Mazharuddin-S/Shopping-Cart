@@ -14,12 +14,6 @@ function Search() {
     let recommendation = document.getElementById("recommendation");
     let search = document.getElementById("search");
 
-    if (window.navigator.userAgentData.mobile == true) {
-      redirect("/search", { replace: true });
-      search.style.position = "absolute";
-      search.style.left = "50%";
-      search.style.transform = "translateX(-60%)";
-    }
     clearTimeout(window.debounce);
     window.debounce = setTimeout(() => {
       let newRecommend = [];
@@ -41,6 +35,15 @@ function Search() {
     }
     recommendation.style.overflow = "auto";
   }
+  function focusHandler() {
+    if (window.navigator.userAgentData.mobile == true) {
+      redirect("/search", { replace: true });
+      let search = document.getElementById("search");
+      search.style.position = "absolute";
+      search.style.left = "50%";
+      search.style.transform = "translateX(-60%)";
+    }
+  }
   function blurHandler(event) {
     let recommendation = document.getElementById("recommendation");
     recommendation.style.height = "0px";
@@ -53,7 +56,7 @@ function Search() {
           type="text"
           onInput={inputHandler}
           onBlur={blurHandler}
-          onFocus={inputHandler}
+          onFocus={focusHandler}
           placeholder="Search Products here"
         />
         <button>{<AiOutlineSearch />}</button>
