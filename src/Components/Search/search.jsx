@@ -1,18 +1,14 @@
 import { useNavigate, Link } from "react-router-dom";
 import { AiOutlineSearch } from "react-icons/ai";
-import { useEffect, useState, useRef } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
 import "../../Css/Navbar.css";
 
 function Search() {
   const products = useSelector(store => store.products);
   const [recommend, setRecommendation] = useState([]);
-  const inputRef = useRef();
-  const redirect = useNavigate();
 
-  useEffect(() => {
-    inputRef.current.focus();
-  }, []);
+  const redirect = useNavigate();
 
   function inputHandler(event) {
     let value = event.target.value.toLowerCase();
@@ -60,7 +56,6 @@ function Search() {
       <div>
         <input
           type="text"
-          ref={inputRef}
           onInput={inputHandler}
           onBlur={blurHandler}
           onFocus={focusHandler}
