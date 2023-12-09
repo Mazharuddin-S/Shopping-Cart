@@ -43,6 +43,7 @@ function Search() {
       search.style.left = "50%";
       search.style.transform = "translateX(-60%)";
     }
+    window.scrollTo(0, 0);
   }
   function blurHandler(event) {
     let recommendation = document.getElementById("recommendation");
