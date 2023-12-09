@@ -37,7 +37,7 @@ function Search() {
   }
   function focusHandler() {
     if (window.navigator.userAgentData.mobile == true) {
-      redirect("/search", { replace: true });
+      redirect("/search", { replace: false });
       let search = document.getElementById("search");
       search.style.position = "absolute";
       search.style.left = "50%";
